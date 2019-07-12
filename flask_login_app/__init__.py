@@ -31,6 +31,7 @@ def create_app():
         from . import db
         from . import auth
         from . import members
+        from . import public
         from .models import User
 
         # Create Tables
@@ -38,7 +39,8 @@ def create_app():
         # Register Blueprints
         app.register_blueprint(members.bp)
         app.register_blueprint(auth.bp)
-        app.add_url_rule('/', methods=['GET', 'POST'], endpoint='members.index')
+        app.register_blueprint(public.bp)
+        app.add_url_rule('/', methods=['GET', 'POST'], endpoint='public.index')
         # Initialize Login Manager
         login_manager.init_app(app)
     return app
