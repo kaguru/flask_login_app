@@ -17,8 +17,12 @@ form label {
     color: #F2F2F2;
     background: #333333;
     padding: 10px 40px;
+    cursor: pointer !important;
 }
 
+.submit-btn::hover {
+    cursor: pointer !important;
+}
 ul {
     margin: 20px 0px;
     padding: 0px;
