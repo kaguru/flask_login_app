@@ -1,2 +1,2 @@
 # flask_login_app
-A Flask Authentication Application using Flask Login and SQLite 
+A Simple Flask Authentication Application using Flask Login and SQLite 
