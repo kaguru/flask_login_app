@@ -1,6 +1,9 @@
 # flask_login_app
 A Simple Flask Authentication Application using Flask Login and SQLite 
 
+![screenshot](https://github.com/kaguru/flask_login_app/blob/master/Selection_114.png)
+
+
 # Installation
 
 ```
@@ -27,4 +30,3 @@ FLASK_APP=flask_login_app FLASK_ENV= development flask run
 Navigate to  http://127.0.0.1:5000  on your Browser
 ```
 
-![screenshot](https://github.com/kaguru/flask_login_app/blob/master/Selection_114.png)
