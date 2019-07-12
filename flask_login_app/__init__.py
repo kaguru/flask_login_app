@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, redirect, url_for
 from flask_login import LoginManager
 from .forms import LoginForm, RegisterForm
-from .models import User, UserActive
+from .models import UserActive
 
 
 login_manager = LoginManager()
@@ -32,7 +32,6 @@ def create_app():
         from . import auth
         from . import members
         from . import public
-        from .models import User
 
         # Create Tables
         models.create_tables(db.get_engine())
