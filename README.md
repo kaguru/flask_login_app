@@ -15,7 +15,7 @@ cd  flask_login_app
 virtualenv -p python3.7 venv
 
 4. Activate the virtual Environment
-flask_login_app
+source venv/bin/activate
 
 5. Install Dependencies
 pip install -r requirements.txt
