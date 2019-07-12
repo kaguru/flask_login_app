@@ -26,3 +26,5 @@ FLASK_APP=flask_login_app FLASK_ENV= development flask run
 7. View Application on Web Browser 
 Navigate to  http://127.0.0.1:5000  on your Browser
 ```
+
+![screenshot](https://github.com/kaguru/flask_login_app/blob/master/Selection_114.png)
