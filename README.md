@@ -1,8 +1,9 @@
 # flask_login_app
 A Simple Flask Authentication Application using Flask Login and SQLite 
 
-# iInstallation
-Installation
+# Installation
+
+```
 
 1. Clone the Project
    git clone https://github.com/kaguru/flask_login_app.git
@@ -22,4 +23,6 @@ Installation
 6. Run The Application
    FLASK_APP=flask_login_app FLASK_ENV= development flask run
 
-7. Navigate to http://127.0.0.1:5000 on your Browser
+7. View Application on Web Browser 
+  Navigate to http://127.0.0.1:5000 on your Browser
+```
