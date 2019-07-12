@@ -24,7 +24,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 6. Run The Application
-FLASK_APP=flask_login_app FLASK_ENV= development flask run
+FLASK_APP=flask_login_app FLASK_ENV=development flask run
 
 7. View Application on Web Browser 
 Navigate to  http://127.0.0.1:5000  on your Browser
