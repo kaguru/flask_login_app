@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block section %}
+<h1>REGISTRATION PAGE</h1>
+
+{% include 'messages.html' %}
+
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.username.label }} {{ form.username(size=20)}}
+    <br>
+    {{ form.email.label }} {{ form.email(size=20)}}
+    <br>
+    {{ form.password.label }} {{ form.password(size=20)}}
+    <br>
+    <input class="submit-btn" type="submit" value="Login" style="">
+</form>
+{% endblock section %}
