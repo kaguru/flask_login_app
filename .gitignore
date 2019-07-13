@@ -2,3 +2,4 @@ venv
 .idea
 flask_login_app/__pycache__
 flask_login_app/*.sqlite
+.vscode
