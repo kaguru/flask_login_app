@@ -15,7 +15,6 @@ def load_user(user_id):
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    print(dir(request.endpoint))
     return redirect(url_for('auth.login', next=request.path))
 
 
