@@ -24,7 +24,6 @@ def create_app():
     app.config['DATABASE'] = f"sqlite:///{os.path.dirname(__file__)}/db_login_app.sqlite"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
     with app.app_context():
         from . import models
         from . import db
