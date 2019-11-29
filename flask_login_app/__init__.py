@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, redirect, url_for
 from flask_login import LoginManager
 from .forms import LoginForm, RegisterForm
-from .models import User, UserActive
+from .models import UserActive
 
 
 login_manager = LoginManager()
@@ -15,7 +15,6 @@ def load_user(user_id):
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    print(dir(request.endpoint))
     return redirect(url_for('auth.login', next=request.path))
 
 
@@ -25,17 +24,13 @@ def create_app():
     app.config['DATABASE'] = f"sqlite:///{os.path.dirname(__file__)}/db_login_app.sqlite"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
     with app.app_context():
         from . import models
         from . import db
         from . import auth
         from . import members
         from . import public
-        from .models import User
 
-        # Create Tables
-        models.create_tables(db.get_engine())
         # Register Blueprints
         app.register_blueprint(members.bp)
         app.register_blueprint(auth.bp)
@@ -43,6 +38,11 @@ def create_app():
         app.add_url_rule('/', methods=['GET', 'POST'], endpoint='public.index')
         # Initialize Login Manager
         login_manager.init_app(app)
+
+        # Create Tables
+        @app.before_first_request
+        def create_tables():
+            models.create_tables(db.get_engine())
     return app
 
 
